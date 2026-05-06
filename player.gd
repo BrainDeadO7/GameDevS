@@ -3,7 +3,19 @@ extends CharacterBody2D
 signal health_depleted
 
 var health = 100.0
+@export var required_exp = 3
+var exp: int = 0:
+	set(value):
+		exp = value
+		if exp == required_exp:
+			level+=1
+			exp = 0
+			required_exp = level*2+3
 
+var level: int = 0:
+	set(value):
+		level = value
+		level_up()
 
 func _physics_process(delta):
 	const SPEED = 600.0
@@ -25,3 +37,10 @@ func _physics_process(delta):
 		%HealthBar.value = health
 		if health <= 0.0:
 			health_depleted.emit()
+
+func level_up():
+	print("LEVEL UP! | ",level," now!")
+	var menu = get_node_or_null("%LevelUpMenu") # %는 Unique Name 기호
+	if menu:
+		menu.open_pause_menu()
+	

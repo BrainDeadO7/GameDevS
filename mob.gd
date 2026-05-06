@@ -24,6 +24,7 @@ func take_damage():
 	health -= 1
 
 	if health == 0:
+		player.exp += 1
 		var smoke_scene = preload("res://smoke_explosion/smoke_explosion.tscn")
 		var smoke = smoke_scene.instantiate()
 		get_parent().add_child(smoke)

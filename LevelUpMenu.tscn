@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dyw2xgqesmb7r"]
+
+[ext_resource type="Script" uid="uid://cq63kpwno01d8" path="res://PauseMenu.gd" id="1_5i1ev"]
+
+[node name="LevelUpMenu" type="CanvasLayer" unique_id=1278226315]
+process_mode = 3
+script = ExtResource("1_5i1ev")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=346773228]
+offset_top = 4.0
+offset_right = 1820.0
+offset_bottom = 944.0
+
+[node name="Button" type="Button" parent="." unique_id=348015016]
+anchors_preset = -1
+anchor_right = 0.38200003
+anchor_bottom = 0.545
+offset_left = 335.0
+offset_top = 168.0
+offset_right = 340.55994
+offset_bottom = 155.39996
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

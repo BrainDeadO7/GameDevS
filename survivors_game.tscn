@@ -8,6 +8,8 @@
 [ext_resource type="Script" uid="uid://7r6d5nvg3qgi" path="res://judgement_line.gd" id="5_edxvn"]
 [ext_resource type="Texture2D" uid="uid://d2crst1i6gvhd" path="res://Board.png" id="6_pk6fm"]
 [ext_resource type="PackedScene" uid="uid://b0ifqixrvtyn8" path="res://Note.tscn" id="7_getvi"]
+[ext_resource type="PackedScene" uid="uid://dyw2xgqesmb7r" path="res://LevelUpMenu.tscn" id="8_3uxnc"]
+[ext_resource type="Script" uid="uid://orvhta1dvi3r" path="res://progress_bar.gd" id="8_mx11s"]
 
 [sub_resource type="Curve2D" id="Curve2D_cp6e5"]
 _data = {
@@ -41,6 +43,7 @@ wait_time = 0.3
 autostart = true
 
 [node name="Player" parent="." unique_id=1174028023 instance=ExtResource("2_a7q7f")]
+unique_name_in_owner = true
 
 [node name="Path2D" type="Path2D" parent="Player" unique_id=1949369106]
 curve = SubResource("Curve2D_cp6e5")
@@ -72,6 +75,13 @@ texture = ExtResource("6_pk6fm")
 [node name="Note" parent="Player" unique_id=490645025 instance=ExtResource("7_getvi")]
 position = Vector2(0, 50)
 
+[node name="ProgressBar" type="ProgressBar" parent="Player" unique_id=1115126029]
+offset_left = -129.0
+offset_top = 77.0
+offset_right = 128.0
+offset_bottom = 104.0
+script = ExtResource("8_mx11s")
+
 [node name="GameOver" type="CanvasLayer" parent="." unique_id=880031702]
 unique_name_in_owner = true
 visible = false
@@ -102,6 +112,9 @@ theme_override_font_sizes/font_size = 124
 text = "Game Over"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="LevelUpMenu" parent="." unique_id=1278226315 instance=ExtResource("8_3uxnc")]
+unique_name_in_owner = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1066809076]
 layer = -32
