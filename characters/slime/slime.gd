@@ -2,9 +2,12 @@ extends Node2D
 
 
 func play_walk():
-	%AnimationPlayer.play("walk")
+	if %AnimationPlayer.has_animation("walk"):
+		%AnimationPlayer.play("walk")
 
 
 func play_hurt():
-	%AnimationPlayer.play("hurt")
-	%AnimationPlayer.queue("walk")
+	if %AnimationPlayer.has_animation("hurt"):
+		%AnimationPlayer.play("hurt")
+		if %AnimationPlayer.has_animation("walk"):
+			%AnimationPlayer.queue("walk")

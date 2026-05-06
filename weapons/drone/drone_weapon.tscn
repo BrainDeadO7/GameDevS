@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dygp2vmrtwvlp"]
+
+[ext_resource type="Script" uid="uid://br3dq2prbvx04" path="res://weapons/drone/drone_weapon.gd" id="1_w36sm"]
+
+[node name="DroneWeapon" type="Node2D"]
+script = ExtResource("1_w36sm")
