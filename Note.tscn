@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://b0ifqixrvtyn8"]
+
+[ext_resource type="Script" uid="uid://bv5ns0hyojp84" path="res://note.gd" id="1_pmjlu"]
+[ext_resource type="Texture2D" uid="uid://dsevr7gbp532v" path="res://Pressed.png" id="2_6st8q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ewwnu"]
+size = Vector2(10, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_71nm0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6st8q")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Note" type="Area2D" unique_id=490645025 groups=["note"]]
+visible = false
+script = ExtResource("1_pmjlu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1446190954]
+shape = SubResource("RectangleShape2D_ewwnu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1331481868]
+modulate = Color(1, 1, 0, 1)
+z_index = 101
+sprite_frames = SubResource("SpriteFrames_71nm0")
+
+[node name="Timer" type="Timer" parent="." unique_id=1421699604]
+wait_time = 0.2
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
