@@ -115,6 +115,7 @@ vertical_alignment = 1
 
 [node name="LevelUpMenu" parent="." unique_id=1278226315 instance=ExtResource("8_3uxnc")]
 unique_name_in_owner = true
+visible = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1066809076]
 layer = -32

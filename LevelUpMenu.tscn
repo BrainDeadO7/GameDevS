@@ -8,16 +8,112 @@ script = ExtResource("1_5i1ev")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=346773228]
 offset_top = 4.0
-offset_right = 1820.0
-offset_bottom = 944.0
+offset_right = 1943.0
+offset_bottom = 1101.0
 
 [node name="Button" type="Button" parent="." unique_id=348015016]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 750.0
+offset_top = 954.0
+offset_right = -740.0
+offset_bottom = -4.0
+
+[node name="Label" type="Label" parent="Button" unique_id=716374591]
+layout_mode = 0
+offset_right = 430.0
+offset_bottom = 122.0
+theme_override_font_sizes/font_size = 72
+text = "Cancel"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button2" type="Button" parent="." unique_id=560127926]
 anchors_preset = -1
-anchor_right = 0.38200003
-anchor_bottom = 0.545
-offset_left = 335.0
-offset_top = 168.0
-offset_right = 340.55994
-offset_bottom = 155.39996
+anchor_right = 0.34800002
+anchor_bottom = 1.019
+offset_left = 127.0
+offset_top = 191.0
+offset_right = -116.160034
+offset_bottom = -203.52002
+
+[node name="skill" type="Label" parent="Button2" unique_id=1938207619]
+layout_mode = 0
+offset_right = 425.0
+offset_bottom = 706.0
+theme_override_font_sizes/font_size = 72
+text = "test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lvl" type="Label" parent="Button2" unique_id=1675467710]
+layout_mode = 0
+offset_top = 161.0
+offset_right = 425.0
+offset_bottom = 706.0
+theme_override_font_sizes/font_size = 36
+text = "test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button3" type="Button" parent="." unique_id=1381141070]
+anchors_preset = -1
+anchor_right = 0.34800002
+anchor_bottom = 1.019
+offset_left = 750.0
+offset_top = 191.0
+offset_right = 511.83997
+offset_bottom = -203.52002
+
+[node name="skill" type="Label" parent="Button3" unique_id=268371644]
+layout_mode = 0
+offset_right = 425.0
+offset_bottom = 706.0
+theme_override_font_sizes/font_size = 72
+text = "test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lvl" type="Label" parent="Button3" unique_id=1861484340]
+layout_mode = 0
+offset_top = 161.0
+offset_right = 425.0
+offset_bottom = 706.0
+theme_override_font_sizes/font_size = 36
+text = "test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button4" type="Button" parent="." unique_id=277183023]
+anchors_preset = -1
+anchor_right = 0.34800002
+anchor_bottom = 1.019
+offset_left = 1381.0
+offset_top = 191.0
+offset_right = 1137.84
+offset_bottom = -203.52002
+
+[node name="skill" type="Label" parent="Button4" unique_id=763751682]
+layout_mode = 0
+offset_right = 425.0
+offset_bottom = 706.0
+theme_override_font_sizes/font_size = 72
+text = "test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lvl" type="Label" parent="Button4" unique_id=1953026013]
+layout_mode = 0
+offset_top = 161.0
+offset_right = 425.0
+offset_bottom = 706.0
+theme_override_font_sizes/font_size = 36
+text = "test"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
