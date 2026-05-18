@@ -3,11 +3,11 @@ extends CharacterBody2D
 signal health_depleted
 
 var player_skills = {
-	"gun": 4,
-	"swip": 4,
-	"throwing": 4,
-	"magic": 4,
-	"shield": 4
+	"gun": 0,
+	"swip": 0,
+	"throwing": 0,
+	"magic": 0,
+	"shield": 0
 } #플레이어 스킬들. 최소0 ~ 최대5로 설정할 예정
 
 var health = 100.0

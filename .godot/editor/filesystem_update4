@@ -1,3 +1,9 @@
 res://PauseMenu.gd
 res://player.gd
 res://LevelUpMenu.tscn
+res://gun.gd
+res://mob.gd
+res://characters/happy_boo/happy_boo.gd
+res://characters/slime/slime.gd
+res://characters/slime/slime.tscn
+res://smoke_explosion/smoke_explosion.gd
