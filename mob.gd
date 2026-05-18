@@ -10,6 +10,7 @@ var health = 3
 
 
 func _ready():
+	add_to_group("mobs")
 	%Slime.play_walk()
 
 
@@ -19,14 +20,17 @@ func _physics_process(_delta):
 	move_and_slide()
 
 
-func take_damage():
+func take_damage(amount := 1):
 	%Slime.play_hurt()
-	health -= 1
+	health -= amount
 
-	if health == 0:
+	if health <= 0:
+		died.emit()
 		player.exp += 1
+
 		var smoke_scene = preload("res://smoke_explosion/smoke_explosion.tscn")
 		var smoke = smoke_scene.instantiate()
 		get_parent().add_child(smoke)
 		smoke.global_position = global_position
+
 		queue_free()

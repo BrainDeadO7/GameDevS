@@ -1,8 +1,17 @@
 extends Node2D
 
+@export var fade_delay: float = 0.5
+@export var fade_duration: float = 1.5
+
 
 func _ready():
-	%Smoke.material.set_shader_parameter("texture_offset", Vector2(randfn(0.0, 1.0), randfn(0.0, 1.0)))
-	%AnimationPlayer.play("explosion")
-	await %AnimationPlayer.animation_finished
+	if has_node("AnimationPlayer"):
+		$AnimationPlayer.play("explosion")
+
+	await get_tree().create_timer(fade_delay).timeout
+
+	var tween = create_tween()
+	tween.tween_property(self, "modulate:a", 0.0, fade_duration)
+
+	await tween.finished
 	queue_free()

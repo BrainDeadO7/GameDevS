@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://d33jld0p2j53o"]
+
+[ext_resource type="Script" uid="uid://cd6rinet2h6j7" path="res://weapons/boomerang/boomerang_weapon.gd" id="1_hb0cx"]
+
+[node name="BoomerangWeapon" type="Node2D"]
+script = ExtResource("1_hb0cx")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true

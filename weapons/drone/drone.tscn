@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwkxmp3144rl0"]
+
+[ext_resource type="Script" uid="uid://cjijwgjj0dk5n" path="res://weapons/drone/drone.gd" id="1_51pby"]
+[ext_resource type="Texture2D" uid="uid://bwf1abn0avqpp" path="res://weapons/drone/drone_move.png" id="1_usb3i"]
+
+[node name="Drone" type="Node2D"]
+script = ExtResource("1_51pby")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4.7683716e-07, -4.7683716e-07)
+scale = Vector2(0.6627359, 0.6375)
+texture = ExtResource("1_usb3i")
+
+[node name="ShootingPoint" type="Marker2D" parent="."]
+position = Vector2(0, 20)
+
+[node name="AttackTimer" type="Timer" parent="."]
+wait_time = 1.2
+autostart = true

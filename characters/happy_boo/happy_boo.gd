@@ -2,8 +2,10 @@ extends Node2D
 
 
 func play_idle_animation():
-	%AnimationPlayer.play("idle")
+	if %AnimationPlayer.has_animation("idle"):
+		%AnimationPlayer.play("idle")
 
 
 func play_walk_animation():
-	%AnimationPlayer.play("walk")
+	if %AnimationPlayer.has_animation("walk"):
+		%AnimationPlayer.play("walk")
